@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1.冒泡排序
+        // var arr =[1,3,24,56,5,8];
+        // for (var i = 1;i < arr.length;i++) {
+        //     for (var j = 0;j< arr.length-i;j++) {
+        //         if (arr[j]>arr[j+1]) {
+        //             var temp = arr[j];
+        //             arr[j] = arr[j+1]
+        //             arr[j+1]=temp;
+        //         }
+        //     }
+        // }
+        // document.write(arr);
+
+
+
+
+        // var arr =[1,3,24,56,5,8];
+		// // 比较趟数，比较长度-1趟
+        // for (var i = 1;i <arr.length; i++) {
+		// 	// alert('比较了' + i + '趟');
+		// 	// 每趟比较次数
+        //     for (var j = 0; j < arr.length-i;j++) {
+		// 		// 比较交换
+        //         if (arr[j] > arr[j+1]) {
+        //             var temp = arr[j];
+        //             arr[j] = arr[j+1];
+        //             arr[j+1] = temp
+        //         }
+        //     }
+        // }
+        // document.write(arr);
+
+        var arr =[29,39,8,2,98,11];
+        for(var i = 1;i<arr.length; i++) {
+            for(var j =0;j <arr.length-i;j++) {
+                if(arr[j]>arr[j+1]) {
+                    var temp = arr[j];
+                    arr[j]= arr[j+1];
+                    arr[j+1] = temp;
+                }
+            }
+        }
+        document.write(arr);
+
+
+        // 2.九九乘法表
+        document.write('<table border="1">');
+        for(var i = 1;i <= 9;i++){//i为行
+            document.write('<tr>')
+            for(var j =1;j <= i;j++) {//j为列
+                document.write('<td>');
+                document.write(i+'*'+j+'='+i*j);
+                document.write('</td>');
+            }
+            document.write('</tr>');
+        }
+        document.write('</table>');
+
+
+
+
+        document.write('<table border="1">');
+        for (var i = 1;i <=9;i++){
+            document.write('<tr>')
+            for(var j=1;j <=i;j++){
+                document.write("<td>");
+                document.write(j+'x'+i+'='+i*j);
+                document.write("</td>");
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+
+        // 3.闭包
+        function bie(){
+            var a = 3;
+            function guan(){
+                console.log(a);
+            }
+            return guan;
+        }
+        var cyqz = bie();
+        cyqz();
+
+
+
+        function bie() {
+            var a = 3;
+            function shu() {
+                console.log(a);
+            }
+            return guan;
+        }
+        var cyqz = bir();
+        cyqz();
+
+
+
+
+        // 4.ajax封装
+        function getXhr () {
+            var xhr = null;
+            if(window.XMLHttpRequest) {
+                xhr = new XMLHttpRequest();
+            } else {
+                xhr = new ActiveXObject('Msxml2.XMLHTTP');
+            }
+            return xhr;
+        }
+        var xhr = getXhr();
+        xhr.open('get','/api/getStr');
+        xhr.send();
+
+
+
+        // 5.数组去重
+        var arr1 = [2,4,3,6,87,9,6]
+        function getArr(arr) {
+            var newArr = [];
+            for (var i = 0; i < arr.length;i++) {
+                var flag = true;
+                for(var j=0;j < newArr.length;j++) {
+                    if (newArr[j] == arr[i]) {
+                        flag = false;
+                    }
+                }
+                if (flag) {
+                    newArr[newArr.length] = arr[i];
+                }
+            }
+            return newArr;
+        }
+        console.log(getArr(arr1));
+
+    </script>
+</body>
+</html>

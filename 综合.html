@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1.冒泡排序
+        var arr = [1, 3, 24, 56, 5, 8];
+        // 比较趟数，比较长度-1趟
+        for (var i = 1; i < arr.length; i++) {
+            // alert('比较了' + i + '趟');
+            // 每趟比较次数
+            for (var j = 0; j < arr.length - i; j++) {
+                // 比较交换
+                if (arr[j] > arr[j + 1]) {
+                    var temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp
+                }
+            }
+        }
+        document.write(arr);
+
+
+        //2.九九乘法表
+        /*
+				      第一列	第二列	第三列	第四列
+				第一行：1X1=1
+				第二行：1X2=2	2X2=4
+				第三行：1X3=3	2X3=6	3X3=9
+				第四行：1X4=4	2X4=8 	3X4=12	4X4=16
+				......
+				找规律：九行，行和列相同，列数X行数=列数*行数
+			 */
+        document.write("<table border='1' width='1000'>");
+        for (var i = 1; i <= 9; i++) { //i为行
+            document.write("<tr align = 'center'>");
+            for (var j = 1; j <= i; j++) { //j为列
+                document.write("<td>");
+                document.write(j + 'x' + i + '=' + i * j);
+                document.write("</td>");
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+
+
+
+        // 3.闭包
+        // 生活：藏在别墅中的三儿，被外部的朝阳群众操作了。
+        function bieShu() {
+            // 局部变量
+            var a = 3;
+            // 卧底
+            function guanJia() { // 复杂的数据类型
+                console.log(a);
+            }
+            return guanJia; // 将子函数的地址返回
+        }
+        var cyqz = bieShu();
+        cyqz();
+        cyqz();
+        cyqz();
+        cyqz();
+        cyqz();
+
+
+
+        // 4.ajax
+        function getXhr() {
+            var xhr = null;
+            if (window.XMLHttpRequest) {
+                xhr = new XMLHttpRequest();
+            } else {
+                xhr = new ActiveXObject('Msxml2.XMLHTTP');
+            }
+            return xhr;
+        }
+        var xhr = getXhr();
+        xhr.open('get', '/api/getStr');
+        xhr.send();
+
+
+
+        
+        // 5.数组去重
+        var arr1 = [2, 4, 6, 5, 2, 6, 3];
+        // 去除数组重复元素
+        function getArr(arr) {
+            // 循环遍历数组，判断判断新数组中是否存在这个数据，如果不存在，就放到新数组中
+            // 定义一个新的数组保存不重复的数
+            var newArr = [];
+            // 遍历数组
+            for (var i = 0; i < arr.length; i++) { // i代表arr的下标
+                // 假设法：假设不存在
+                var flag = true;
+                // 让arr[i]去newArr中和每一个数比较，如果没找到相等的，就放到新数组中
+                for (var j = 0; j < newArr.length; j++) { // j代表新数组的下标
+                    if (newArr[j] == arr[i]) {
+                        flag = false;
+                    }
+                }
+                // 等循环结束后就知道是否要不要放入新数组中
+                // 如果flag为true，说明要放入新数组中，如果flag为false，说明有相同的数据，不要放入新数组
+                if (flag) {
+                    newArr[newArr.length] = arr[i];
+                }
+            }
+            // 当两个循环都结束之后，最后的newArr就是我们要找的不重复数组
+            return newArr;
+        }
+        console.log(getArr(arr1));
+    </script>
+</body>
+
+</html>

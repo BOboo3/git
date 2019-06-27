@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 1.创建数组
+        // var arr = [32,22,21,29,45,36];
+
+        // alert(arr);
+        // // 下标取值，赋值
+        // alert(arr[1]);
+        // arr[0] = 66;
+        // alert(arr[0]);
+
+        // // 数组长度：数组.length
+        // alert(arr.length);
+        // // 遍历
+        // for(var i = 0;i < arr.length; i++) {
+        //     alert(arr[i]);
+        // }
+
+        // 数组：[[],[],[]]
+
+        // var arr = [
+        //     [1,2,3],
+        //     [4,5,6],
+        //     [7,8,9]
+        // ];
+        // // alert(arr);
+        // for (var i = 0;i < arr.length; i++) {
+        //     for(var j = 0;j <arr[i].length;j++) {
+        //         alert(arr[i][j]);
+        //     }
+        // }
+
+
+
+        // 2.冒泡排序
+        // var arr = [0.2,88,42,12,69,165];
+        // // 比较趟数，比较长度-1趟
+        // for(var i = 1;i < arr.length;i++) {
+        //     // alert('比较了'+i+'趟');
+        //     // 每趟比较次数
+        //     for (var j = 0;j <arr.length-i;j++) {
+        //         // 比较交换
+        //         if(arr[j]>arr[j+1]){
+        //             var temp = arr[j];
+        //             arr[j] = arr[j+1];
+        //             arr[j+1]=temp;
+        //         }
+        //     }
+        // }
+        // document.write(arr);
+
+
+        // var arr = [3,6,5,48,97,4];
+        // for (var i = 1;i < arr.length;i++){
+        //     for (j = 0; j <arr.length-i;j++) {
+        //         if(arr[j]>arr[j+1]){
+        //             var temp = arr[j];
+        //             arr[j]=arr[j+1];
+        //             arr[j+1]=temp;
+        //         }
+        //     }
+        // }
+        // document.write(arr);
+
+        // var arr = [3,45,96,85,12,7,5];
+        // for (var i = 0;i <arr.length;i++) {
+        //     for (var j = 0;j<arr.length-i;j++) {
+        //         if (arr[j]>arr[j+1]) {
+        //             var temp = arr[j];
+        //             arr[j]=arr[j+1];
+        //             arr[j+1]=temp;
+        //         }
+        //     }
+        // }
+        // document.write(arr);
+
+
+
+        // // 3.求1-100之间的和
+        // var sum = 0;
+        // for(var i = 1;i <= 100;i++){
+        //     sum +=i;
+        // }
+        // document.write(sum+" ");
+        // 需要一种机制能够让我们在应用某些代码的时候，直接调用，而不用再写一遍
+        // 创建函数【封装代码】
+        // function getSum () {
+        //     var sum = 0;
+        //     for(var i = 1; i <= 100; i++) {
+        //         sum += i;
+        //     }
+        //     document.write(sum+" ")
+        // }
+        // // 调用函数
+        // getSum();
+        // getSum();
+
+
+
+
+
+        // 4.函数声明
+        // function函数名（）{}
+        // 第二种匿名函数
+        // 函数：本身就是一种特殊的数据类型
+        // var fn = function (){
+        //     alert('函数执行');
+        // }
+        // fn();
+        // 1.将比较数字大小封装到一个函数中
+        // 先把比较大小的代码写完，之后放到函数中
+
+        // 1）定义函数
+        // function getMax() {
+        //     var num1 = 23;
+        //     var num2 = 72;
+        //     var result = num1 >num2 ? num1:num2;
+        //     document.write(result+'大');
+        // }
+        // getMax();
+        // getMax();
+
+
+        // function getSum(num1,num2){//num1和num2是形参,形参可以直接在函数中使用
+        //     // var num1 = 2;
+        //     // var num2 = 99;
+        //     var sum = num1 + num2;
+        //     document.write(sum+' ');
+        // }
+        // getSum(2,99);
+        // getSum(98,3);
+
+
+
+
+        // 5.求圆的面积PI*r*r
+        // 写一个鞥够求面积的代码
+        // 申明函数【因为不知道半径r到底是多少，定义形参】
+        // function getS(r){
+        //     // 求面积pi假设为3.14
+        //     var s = 3.14*r*r;
+        //     // 输出
+        //     document.write('面积为'+s);
+        // }
+        // getS(10);
+        // getS(100);
+        // getS(1000);
+
+
+
+
+        // 6.求n到m之间数字之和
+        // function getSum(n,m) {
+        //     // 求和
+        //     var sum =0;
+        //     // 把n到m之间的所有数找到累加
+        //     for (var i = n;i <= m;i++) {
+        //         sum +=i;
+        //     }
+        //     document.write(sum);
+        // }
+        // // 调用
+        // getSum(1,100);
+        // getSum(2,9);
+
+
+
+
+        // 7.求三个数中的最大值
+        // function getMax(num1,num2,num3){
+        //     // 最大值比较
+        //     if(num1>num2&&num1>num3) {
+        //         alert(num1);
+        //     }else if ( num2>num1&&num2>num3){
+        //         alert(num2);
+        //     }else{
+        //         alert(num3);
+        //     }
+        // }
+        // getMax(2,9,6);
+        // getMax(8,8,8);
+        // getMax(100,2,66);
+
+
+
+
+        // 8.判断一个数是奇数还是偶数
+        // 申明函数
+        // function fn1(num){
+        //     // 判断
+        //     if(num % 2 == 0 ) {
+        //         alert('偶数');
+        //     }else{
+        //         alert('奇数');
+        //     }
+        // }
+        // fn1(3);
+        // fn1(6);
+        // fn1(0);
+
+
+
+        // 9.求和练习
+        // 把结果放到函数外面输出？
+        // 我们要把结果返回到函数外面才可以用
+        // function fn (num1,num2) {
+        //     var sum = num1 + num2;
+        //     // document.write('总和为'+ sum);
+        //     return sum;
+        // }
+        // // 现在函数return值，所以函数调用就相当于这个返回的值
+        // // 现接受
+        // var result = fn(2,3);
+        // document.write(result);
+        // var re = fn(4,6);
+        // document.write(re);
+
+
+
+        // 10.求任意一个数的平方
+        // function fun (num) {
+        //     var result = num * num;
+        //     return result;
+        // }
+        // var re = fun(10);
+        // document.write(re);
+
+        // var re1 = fun(100);
+        // document.write(re1);
+
+
+
+        // 11.return返回值
+        // return
+        // function fn () {
+        //     document.write("1 ")
+        //     // return:后面如果有值，把值返回到函数外面；后面如果没有值 返回的是undefined
+        //     // 如果没有写return，那么默认的也会把undefined返回
+        //     // return；
+        //     // document.write(2);
+        // }
+            // 函数一旦遇到return，就立刻停止函数的执行，在return后面（除了返回值），都不会执行
+
+
+
+            // function fn () {
+            //     document.write(1);
+            //     // 函数特殊的数据类型
+            //     return function () {
+            //         alert("返回值的函数");
+            //     }
+            // }
+            // var result = fn();
+            // result();
+
+
+
+
+
+        // 12.返回值练习
+        // 获取数组中最大值，并返回
+        // 定义函数，函数内部在对数组取最大值；
+        // var arr1 = [23,19,66];
+        // function getMax(arr) {
+        //     var max = arr[0];
+        //     for(var i = 0;i < arr.length; i++) {
+        //         if(max < arr[i]){
+        //             max = arr[i];
+        //         }
+        //     }
+        //     return max;
+        // }
+        // var re1 = getMax(arr1);
+        // document.write(re1);
+
+
+        // var arr2 = [3,6,59,4,85,98,2];
+        // var re2 = getMax(arr2);
+        // document.write(re2);
+
+
+
+
+        // 13.将一个数组中所有偶数添加到一个新数组中返回，并计算新数组总和
+        // function fun (arr) {
+        //     // 遍历数组中找到偶数，放到新数组中
+        //     // 定义一个新数组
+        //     var newArr = [];
+        //     // 遍历数组找到偶数
+        //     for(var i = 0; i < arr.length;i++) {
+        //         // 判断偶数
+        //         if(arr[i] % 2 ==0) {
+        //             newArr[newArr.length] = arr[i];
+        //         }
+        //     }
+        //     return newArr;
+        // }
+        // var arr1 = [12,13,16,19];
+        // var reArr = fun(arr1);
+        // var sum = 0;
+        // for (var i = 0;i <reArr.length;i++) {
+        //     sum += reArr[i];
+        // }
+        // document.write(sum)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

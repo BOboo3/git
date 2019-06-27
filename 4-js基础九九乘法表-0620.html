@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table tr:nth-child(2n-1){
+            background-color: pink;
+        }
+        table tr:nth-child(2n) {
+            background-color: skyblue;
+        }
+    </style>
+    <script>
+        /*
+						第一列	第二列	第三列	第四列
+				第一行：1X1=1
+				第二行：1X2=2	2X2=4
+				第三行：1X3=3	2X3=6	3X3=9
+				第四行：1X4=4	2X4=8 	3X4=12	4X4=16
+				......
+				找规律：九行，行和列相同，列数X行数=列数*行数
+			 */
+
+            // document.write("<table border='1' width='900'>");
+            // for(var i = 1;i <=9;i++) {//i代表行数
+            //     document.write("<tr align='center'>")
+            //     for(var j = 1; j<= i;j++) {//j代表列数
+            //         document.write("<td>");
+            //         document.write(j+'X' +i +'='+j*i);
+            //         document.write("</td>");
+            //     }
+            //     document.write("</tr>");
+            // }
+            // document.write("</table>");
+
+
+
+
+
+            // document.write("<table>")
+            // for (var i = 1; i <= 9;i++){
+            //     document.write("<tr>")
+            //     for(var j = 1;j <= i ;j++){
+            //         document.write("<td>");
+            //         document.write(j+'X'+i+'='+j*i)
+            //         document.write("</td>")
+            //     }
+            //     document.write("</tr>");
+            // }
+            // document.write("</table>");
+
+
+
+            // document.write("<table>")
+            // for(var i = 1; i <= 9; i++) {
+            //     document.write("<tr>")
+            //     for(var j = 1;j <=i; j++) {
+            //         document.write("<td>");
+            //         document.write(j+'X'+i+'='+j*i);
+            //         document.write("</td>");
+            //     }
+            //     document.write("</tr>");
+            // }
+            // document.write("</table>")
+
+
+
+
+
+
+
+            document.write("<table>")
+            for(var i = 1; i <= 9;i++) {
+                document.write("<tr>");
+                for (var j = 1;j<=i;j++) {
+                    document.write("<td>");
+                    document.write(j+'X+'+i+'='+j*i);
+                    document.write("</td>")
+                }
+                document.write("</tr>");
+            }
+            document.write("</table>");
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

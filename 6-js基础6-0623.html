@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 1.函数
+        // 定义函数
+        // function fn (arr) {
+        //     alert(arr);
+        // }
+
+        // var num = [1,2,3];
+        // var re1 = fn(num);
+        // var re2 = fn(999);
+
+        // function fn () {
+        //     var result = 2+3;
+        // }
+        // fn();
+
+
+
+        // 2.求天数
+        // 写一个函数，输入某年某月某日，判断这一天是一年中的第几天
+        // 函数，需要让用户输入三个参数（形参）（年月日）
+        // 总天数：需要知道当前月份，把当前月份之前所有月份天数都加起来（当前月份天数），就是总天数
+        // 定义函数
+        // function getDays(year,month,day) {
+        //     // year代表年份 month代表月份 day代表天数
+        //     // 求总天数【当前月份之前的天数+当前天数】
+        //     var allDays = day;//直接把当前天数保存给总天数
+        //     // 找到month之前的所有月份
+        //     for (var i = 1;i < month; i++) {
+        //         // 判断i是几月份【if自己回去用这种方法】
+        //         switch(i) {
+        //             case 1:
+        //             case 3:
+        //             case 5:
+        //             case 7:
+        //             case 8:
+        //             case 10:
+        //             case 12:
+        //                 allDays += 31;
+        //                 break;
+        //             case 4:
+        //             case 6:
+        //             case 9:
+        //             case 11:
+        //                 allDays += 30;
+        //                 break;
+        //             case 2:
+        //                 if(year % 4 === 0 && year %100 != 0 || year % 400 ===0) {
+        //                     allDays += 29;
+        //                 } else {
+        //                     allDays += 28;
+        //                 }
+        //         }
+        //     }
+        //     return allDays;
+        // }
+        // var result = getDays(2019,6,23);
+        // alert(result);
+
+
+
+
+        // 3.阶乘的和
+        // 求任意一个数的阶乘的结果
+        // function getJC(m) {
+        //     // 求m的阶乘
+        //     // 把1到m的所有数找到，并且相乘的结果
+        //     var re = 1;
+        //     for (var i = 1;i <= m; i++) {
+        //         re = re*i;
+        //     }
+        //     // 当循环结束返回结果
+        //     return re;
+        // }
+        // // 在去求多个数的阶乘的结果的和
+        // function getSum (n) {
+        //     // 求和
+        //     var sum = 0;
+        //     // 求1到n所有数的阶乘和
+        //     for(var j = 1; j <= n;j++){
+        //         sum = sum +getJC(j);
+        //     }
+        //     // 把结果return
+        //     return sum;
+        // }
+        // alert(getSum(4));
+
+
+
+
+        // 4.数组去重
+        // var arr1 = [2,4,6,5,2,6,3];
+        // // 去除数组重复元素
+        // function getArr(arr) {
+        //     // 循环遍历数组，判断判断新数组中是否存在这个数据，如果不存在，就放到新数组中
+        //     // 定义一个新的数组保存不重复的数
+        //     var newArr= [];
+        //     // 遍历数组
+        //     for(var i = 0;i <arr.length;i++) {
+        //         // 假设法，假设不存在
+        //         var flag = true;
+        //         // 让arr[i]去newArr中和每一个数比较，如果没找到相等的，就放到新数组中
+        //         for(var j = 0;j < newArr.length;j++) {//j代表新数组下标
+        //             if(newArr[j] == arr[i]){
+        //                 flag = false;
+        //             }
+        //         }
+        //         // 等循环结束后就知道是否要不要放入新数组中
+        //         // 如果flag为true，说明要放入新数组中，如果flag为false，说明有相同的数据，不要放入新数组
+        //         if(flag) {
+        //             newArr[newArr.length] = arr[i];
+        //         }
+        //     }
+        //     // 当两个循环都结束之后，最后的newArr就是我们要的不重复数组
+        //     return newArr;
+        // }
+        // console.log(getArr(arr1));
+
+
+
+
+
+        // var arr1 =[2,4,6,5,6,2,3];
+        // function getArr (arr) {
+        //     var newArr=[];
+        //     for(var i = 0; i < arr.length;i++) {
+        //         var flag = true;
+        //         for(var j = 0; j < newArr.length;j++){
+        //             if (newArr[j] == arr[i]) {
+        //                 flag = false;
+        //             }
+        //         }
+        //         if (flag) {
+        //             newArr[newArr.length]=arr[i];
+        //         }
+        //     }
+        //     return newArr;
+        // }
+        // console.log(getArr(arr1));
+
+
+
+
+        // var arr1 = [7,8,9,5,8,9,6,7];
+        // function getArr(arr) {
+        //     var newArr=[];
+        //     for(var i = 0;i < arr.length){
+        //         var flag = true;
+        //         for(var j = 0; j < newArr.length;j++) {
+        //             if(newArr[j]== arr[i]) {
+        //                 flag = false;
+        //             }
+        //         }
+        //         if(flag) {
+        //             newArr[newArr.length]=arr[i];
+        //         }
+        //     }
+        //     return newArr;
+        // }
+        // console.log(getArr(arr1))
+
+
+
+
+
+        // 5.arguments
+        // 求若干个数的最大值
+        // function getMax() {
+        //     var max = arguments[0];
+        //     for (var i = 0; i < arguments.length; i++) {
+        //         if (max < arguments[i]) {
+        //             max = arguments[i];
+        //         }
+        //     }
+        //     return max;
+        // }
+        // var reMax = getMax(2, 9, 8, 5, 48, 23, 544, 58, 1);
+        // console.log(reMax);
+
+
+
+
+        // 6.求任意个数和
+        // function getSum () {
+        //     var sum = 0;
+        //     for (var i = 0; i < arguments.length;i++) {
+        //         sum += arguments[i];
+        //     }
+        //     return sum;
+        // };
+        // var reSum = getSum(1,2,3);
+        // alert(reSum);
+
+
+        // function getSum () {
+        //     var sum = 0;
+        //     for(var i = 0; i < arguments.length; i++) {
+        //         sum += arguments[i];
+        //     }
+        //     return sum;
+        // }
+        // var reSum = getSum(1,2,3);
+        // alert(reSum);
+
+
+        // 7.创建对象
+        // var obj = {
+            // 键值对
+        //     name:'boboo',
+        //     age:23,
+        //     sex:'男',
+        // 方法：
+        //     taiji:function() {
+        //         alert('太极好');
+        //     },
+        //     lanqiu:function() {
+        //         alert('打篮球');
+        //     }
+        // };
+        // alert(obj['age']);
+        // obj.lanqiu();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
